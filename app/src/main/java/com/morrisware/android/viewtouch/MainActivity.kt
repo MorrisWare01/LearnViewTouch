@@ -8,6 +8,7 @@ import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
 import com.morrisware.android.viewtouch.conflict.ViewPagerConflictActivity
 import com.morrisware.android.viewtouch.scroller.ScrollerActivity
+import com.morrisware.android.viewtouch.shopdetail.ShopDetailActivity
 import com.morrisware.android.viewtouch.touch.TouchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         }
         conflict.setOnClickListener {
             startActivity(Intent(this, ViewPagerConflictActivity::class.java))
+        }
+        shopDetail.setOnClickListener {
+            startActivity(Intent(this, ShopDetailActivity::class.java))
         }
 
         textView.viewTreeObserver.addOnGlobalLayoutListener(
